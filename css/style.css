@@ -1,0 +1,998 @@
+/* scroll-behavior: smooth; */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "GothamPro-Light";
+  src: url("../fonts/GothamPro-Light.woff2") format("woff2"),
+    url("../fonts/GothamPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro.woff2") format("woff2"),
+    url("../fonts/GothamPro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GothamPro-Medium";
+  src: url("../fonts/GothamPro-Medium.woff2") format("woff2"),
+    url("../fonts/GothamPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GothamPro-Bold";
+  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"),
+    url("../fonts/GothamPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "GothamPro";
+  font-size: 18px;
+  line-height: 140%;
+  color: #333333;
+  background-color: #e5e5e5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1428px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.section__container {
+  max-width: 1788px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+  font-family: "GothamPro-Bold";
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.heder {
+  margin: 48px 0;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+}
+.header__menu {
+}
+.header__menu-list {
+  display: flex;
+}
+.header__menu-item {
+  font-size: 24px;
+  line-height: 130%;
+}
+.header__menu-item + .header__menu-item {
+  margin-left: 96px;
+}
+.header__menu-link {
+  transition: all 0.3s;
+}
+.header__menu-link:hover {
+  color: #1baad1;
+}
+.header__menu-item--link {
+  display: none;
+}
+.header__mobile-link {
+  display: none;
+}
+.menu__btn {
+  display: none;
+}
+.header__btn {
+  font-family: "GothamPro-Medium";
+  font-size: 24px;
+  line-height: 23px;
+  color: #ffffff;
+  display: block;
+  background: #87b645;
+  border-radius: 4px;
+  padding: 21px 85px;
+  border: none;
+  cursor: pointer;
+}
+
+.header__top {
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+}
+.header__top::before,
+.header__top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+.header__top::before {
+  background-image: url(../images/Ethereum_O.svg);
+  width: 57px;
+  height: 57px;
+  left: 135px;
+}
+.header__top::after {
+  background-image: url(../images/Bitcoin.svg);
+  width: 104px;
+  height: 104px;
+  right: 300px;
+}
+.header__top-title {
+  font-family: "GothamPro-Bold";
+  font-size: 60px;
+  line-height: 130%;
+  letter-spacing: 2px;
+  width: 840px;
+  margin: 0 auto 56px;
+}
+.header__top-text {
+  font-size: 24px;
+  line-height: 130%;
+  margin-bottom: 57px;
+}
+.header__top-link {
+  width: 270px;
+  font-size: 18px;
+  line-height: 17px;
+  display: inline-block;
+}
+.header__top-earn {
+  font-family: "GothamPro-Medium";
+  color: #ffffff;
+  background: #87b645;
+  border-radius: 4px;
+  padding: 18px 35px;
+  margin: 0 25px;
+}
+.header__top-more {
+  font-family: "GothamPro-Light";
+  border: 1px solid #a0c4fa;
+  border-radius: 4px;
+  padding: 17px 50px;
+  margin: 0 25px;
+}
+
+.about {
+  position: relative;
+  margin-bottom: 100px;
+}
+.about__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.about__content {
+  width: 560px;
+  margin-top: 120px;
+  order: 1;
+}
+.about__title {
+  color: #1baad1;
+  margin-bottom: 37px;
+  text-align: left;
+}
+.about__text {
+  font-size: 30px;
+  line-height: 140%;
+}
+.about__img {
+  width: 850px;
+}
+.about__img img {
+  width: 100%;
+}
+
+.description {
+  margin-bottom: 100px;
+}
+.description__items {
+  display: flex;
+  justify-content: space-between;
+}
+.description__item {
+  width: 416px;
+  background-color: #ffffff;
+  border: 1px solid #d7d7d7;
+  border-radius: 24px;
+  text-align: center;
+  padding: 32px 24px;
+}
+.description__item + .description__item {
+  margin-left: 10px;
+}
+.description__img {
+  margin-bottom: 50px;
+}
+.description__title {
+  font-family: "GothamPro-Bold";
+  font-size: 24px;
+  line-height: 140%;
+  margin-bottom: 24px;
+}
+.description__text {
+  text-align: left;
+}
+
+.advantages {
+  margin-bottom: 100px;
+}
+.advantages__title {
+  margin-bottom: 70px;
+}
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages__usual-mining {
+  margin-right: 10px;
+}
+.advantages__usual-mining,
+.advantages__cloud-mining {
+  width: 688px;
+}
+.mining-title {
+  font-family: "GothamPro-Bold";
+  font-size: 36px;
+  line-height: 130%;
+  padding: 80px 5px 80px 180px;
+  background-color: #f8f2e9;
+  border-radius: 12px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.advantages__usual-title {
+  border-top: 16px solid #eb5757;
+}
+.advantages__usual-title::before,
+.advantages__cloud-title::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  width: 128px;
+  height: 128px;
+}
+.advantages__usual-title::before {
+  background-image: url(../images/usual-mining.svg);
+}
+.advantages__cloud-title {
+  border-top: 16px solid #87b645;
+}
+.advantages__cloud-title::before {
+  background-image: url(../images/cloud-mining.svg);
+}
+.advantages__usual-item,
+.advantages__cloud-item {
+  display: flex;
+  align-items: center;
+  width: 640px;
+  height: 176px;
+  border-radius: 4px 8px 8px 4px;
+  margin: 0 auto 24px;
+  padding: 24px 12px 24px 24px;
+  background-color: #ececec;
+  border-left: 8px solid #eb5757;
+}
+.advantages__usual-item:nth-child(even),
+.advantages__cloud-item:nth-child(even) {
+  background-color: #f8f2e9;
+}
+.advantages__cloud-item {
+  border-left: 8px solid #87b645;
+}
+
+.finance {
+  margin-bottom: 100px;
+}
+.finance__title {
+  margin-bottom: 70px;
+}
+.finance__form {
+}
+.finance__form-items {
+  display: flex;
+  justify-content: space-between;
+}
+.finance__form-item {
+  width: 400px;
+}
+.finance__form-text {
+  margin-bottom: 10px;
+}
+.finance__form-input {
+  padding: 20px 24px;
+  width: 100%;
+}
+.finance__form-input + .finance__form-input {
+  margin-bottom: 50px;
+}
+.finance__form-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.finance__form-price {
+}
+.finance__form-price--sum,
+.finance__form-valuta--value {
+  font-family: "GothamPro-Medium";
+  font-size: 48px;
+  line-height: 100%;
+  color: #ffc246;
+  margin-bottom: 24px;
+}
+.finance__form-price--sum span,
+.finance__form-valuta--value span {
+  font-size: 18px;
+  line-height: 140%;
+  color: #333333;
+}
+.finance__form-valuta {
+}
+.finance__select {
+  width: 100%;
+  padding: 20px 40px;
+}
+.select__btc {
+}
+.select__ltc {
+}
+.select__rpl {
+}
+.select__eth {
+}
+.finance__form-btn {
+  font-family: "GothamPro-Medium";
+  font-size: 18px;
+  line-height: 17px;
+  color: #fff;
+  padding: 30px 20px;
+  background-color: #87b645;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-top: 130px;
+  margin-right: 0;
+  margin-left: auto;
+  width: 272px;
+}
+
+.guarantee {
+  margin-bottom: 100px;
+}
+.guarantee__title {
+  margin-bottom: 70px;
+}
+.guarantee__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.guarantee__one,
+.guarantee__two,
+.guarantee__three {
+  width: 432px;
+  height: 296px;
+  padding: 32px;
+  box-shadow: 0px 4px 20px rgba(165, 165, 165, 0.25);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.guarantee__one {
+  background-color: #f8db73;
+}
+.guarantee__two {
+  background-color: #a0c4fa;
+}
+.guarantee__three {
+  background-color: #ffffff;
+}
+.guarantee__one-title,
+.guarantee__two-title,
+.guarantee__three-title {
+  font-family: "GothamPro-Bold";
+  font-size: 24px;
+  line-height: 140%;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 0;
+}
+.guarantee__one-title {
+  color: #2b69dd;
+}
+.guarantee__one-title::after,
+.guarantee__two-title::after,
+.guarantee__three-title::after {
+  content: "";
+  position: absolute;
+  height: 112px;
+  top: -30px;
+  right: -30px;
+  z-index: -1;
+}
+.guarantee__one-title::after {
+  background-image: url(../images/guarantee__one.svg);
+  width: 160px;
+}
+.guarantee__two-title::after {
+  background-image: url(../images/guarantee__two.svg);
+  width: 192px;
+}
+.guarantee__three-title::after {
+  background-image: url(../images/guarantee__three.svg);
+  width: 192px;
+}
+.guarantee__one-text {
+}
+.guarantee__two {
+}
+.guarantee__two-title {
+  color: #f5f5f5;
+}
+.guarantee__two-text {
+  margin-bottom: 32px;
+}
+.guarantee__link {
+  padding: 14px;
+  display: block;
+  background-color: #87b645;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+}
+.guarantee__three {
+}
+.guarantee__three-title {
+}
+.guarantee__three-text {
+  margin-bottom: 32px;
+}
+
+.questions {
+  margin-bottom: 100px;
+}
+.questions__title {
+  margin-bottom: 70px;
+}
+.questions__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.questions__content {
+}
+.questions__content-item {
+  width: 776px;
+  margin-bottom: 20px;
+}
+.questions__content-item--title {
+  font-family: "GothamPro-Bold";
+  font-size: 30px;
+  line-height: 120%;
+  color: #f5f5f5;
+  background-color: #87b645;
+  border-radius: 10px;
+  padding: 50px 90px 50px 40px;
+  cursor: pointer;
+  position: relative;
+}
+.questions__content-item--title::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/questions_arrow.svg);
+  right: 20px;
+  top: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all, 0.3s;
+}
+.questions__content-item.questions__content-item--active
+  .questions__content-item--title {
+  background-color: #f8db73;
+  color: #333333;
+}
+.questions__content-item.questions__content-item--active
+  .questions__content-item--title::after {
+  transform: rotate(90deg) translate(-50%);
+}
+.questions__content-item--text {
+  padding: 40px 40px;
+  display: none;
+  transition: all 0.3s;
+}
+.questions__content-item.questions__content-item--active
+  .questions__content-item--text {
+  display: block;
+}
+.questions__more {
+  width: 472px;
+}
+.questions__more-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+.questions__more-text {
+}
+.questions__more-link {
+  color: #1baad1;
+  border-bottom: 1px solid #fbac00;
+}
+
+.contact {
+  margin-bottom: 100px;
+}
+.contact__title {
+  margin-bottom: 50px;
+}
+.contact__text {
+  width: 472px;
+  text-align: center;
+  margin: 0 auto 100px;
+}
+.contact__form {
+  width: 480px;
+  margin: 0 auto;
+}
+.contact__form-input {
+  display: block;
+  width: 100%;
+  height: 56px;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+.contact__form-input::placeholder {
+  font-family: "GothamPro";
+  font-size: 14px;
+  line-height: 140%;
+  color: #a1a1a3;
+}
+.contact__inner {
+  margin: 32px 0 55px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact__form-checkbox {
+  margin-right: 16px;
+}
+.contact__describe {
+  font-size: 14px;
+  line-height: 160%;
+}
+.contact__link {
+  font-size: 14px;
+  line-height: 120%;
+  color: #fbac00;
+  border-bottom: 2px solid #fbac00;
+  padding-bottom: 2px;
+}
+.contact__btm {
+  font-family: "GothamPro-Medium";
+  font-size: 18px;
+  line-height: 17px;
+  color: #ffffff;
+  padding: 18px;
+  background: #87b645;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 268px;
+  margin: 0 auto;
+  display: block;
+}
+
+.footer {
+  text-align: center;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 50px;
+}
+.footer__items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer__item {
+  width: 184px;
+  text-align-last: left;
+}
+.footer__item-title {
+  font-size: 24px;
+  line-height: 130%;
+  margin-bottom: 20px;
+  pointer-events: none;
+}
+.footer__item-list {
+}
+.footer__list-item + .footer__list-item {
+  margin-top: 20px;
+}
+.footer__list-link {
+  transition: all 0.3s;
+}
+.footer__list-link:hover {
+  color: #1baad1;
+}
+.footer__author {
+  font-size: 12px;
+  line-height: 22px;
+  color: #a1a1a3;
+  margin: 30px 0 10px 0;
+}
+
+@media (max-width: 1440px) {
+  .about__inner {
+    display: block;
+  }
+  .about__content {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .about__img {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1316px) {
+  .guarantee__inner {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .guarantee__one,
+  .guarantee__two {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .advantages__inner {
+    display: block;
+  }
+  .advantages__usual-mining,
+  .advantages__cloud-mining {
+    width: 100%;
+  }
+  .advantages__usual-mining {
+    margin-bottom: 50px;
+  }
+  .advantages__usual-item,
+  .advantages__cloud-item {
+    width: 100%;
+  }
+  .finance__form-items {
+    display: block;
+  }
+  .finance__form-item {
+    margin: 0 auto;
+  }
+  .finance__form-item + .finance__form-item {
+    margin-top: 100px;
+  }
+  .finance__form-input + .finance__form-input {
+    margin-bottom: 20px;
+  }
+  .finance__form-btn {
+    margin-right: auto;
+  }
+  .questions__inner {
+    display: block;
+  }
+  .questions__content-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1290px) {
+  .description__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .description__item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    position: relative;
+  }
+  .header__menu-list {
+    display: none;
+  }
+  .menu__btn {
+    display: block;
+  }
+  .menu__btn div {
+    width: 40px;
+    height: 3px;
+    background-color: #87b645;
+    margin-bottom: 7px;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__menu-list {
+    display: block;
+    position: absolute;
+    top: 130px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: 10;
+  }
+  .header__menu-list.header__menu-list--active {
+    transform: translateX(0);
+  }
+  .header__menu-item + .header__menu-item {
+    margin-left: 0px;
+  }
+  .header__menu-item {
+    margin: 5px 0;
+  }
+  .header__menu-item--link {
+    display: block;
+    margin: 5px 0;
+  }
+  .header__mobile-link {
+    display: block;
+    font-size: 24px;
+    line-height: 130%;
+  }
+  .header__mobile-link:hover {
+    color: #1baad1;
+  }
+  .header__top {
+    padding: 160px 0 100px;
+  }
+  .header__top::before,
+  .header__top::after {
+    display: none;
+  }
+}
+
+@media (max-width: 1155px) {
+}
+
+@media (max-width: 870px) {
+  .about__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .header__top-title {
+    width: 100%;
+    font-size: 54px;
+  }
+  .description,
+  .advantages,
+  .finance,
+  .guarantee,
+  .questions,
+  .contact,
+  .contact__text {
+    margin-bottom: 50px;
+  }
+  .footer__item {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .footer__item-title {
+    padding-left: 24px;
+    position: relative;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .footer__item-title::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 8px;
+    left: 0;
+    top: 12px;
+    background-image: url(../images/arrow-down.svg);
+    transition: all 1s;
+  }
+  .footer__item-title.footer__item-title--active::after {
+    transform: rotate(540deg);
+  }
+  .footer__item-list {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .header__top-title {
+    font-size: 47px;
+  }
+}
+
+@media (max-width: 665px) {
+  .header__top-earn {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header__top-title {
+    font-size: 41px;
+  }
+  .advantages__usual-item,
+  .advantages__cloud-item {
+    height: 146px;
+  }
+  .questions__content-item--title {
+    font-size: 24px;
+    padding: 25px 60px 25px 20px;
+  }
+  .questions__content-item--text {
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .about__content {
+    width: 100%;
+  }
+  .mining-title {
+    padding: 40px 0px;
+    text-align: center;
+    font-size: 28px;
+  }
+  .advantages__usual-title::before,
+  .advantages__cloud-title::before {
+    display: none;
+  }
+  .questions__more-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 550px) {
+  .header__top-title {
+    font-size: 35px;
+  }
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__top-title {
+    font-size: 31px;
+  }
+  .questions__more {
+    width: 100%;
+  }
+  .contact__text {
+    width: 100%;
+  }
+  .contact__form {
+    width: 100%;
+  }
+  .footer__item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .header__top-title {
+    font-size: 28px;
+  }
+  .description__item {
+    width: 100%;
+    padding: 24px 12px;
+  }
+  .advantages__usual-item,
+  .advantages__cloud-item {
+    padding: 24px 12px 24px 12px;
+    font-size: 16px;
+  }
+  .guarantee__one,
+  .guarantee__two,
+  .guarantee__three {
+    width: 100%;
+    padding: 10px;
+  }
+  .guarantee__one-title::after,
+  .guarantee__two-title::after,
+  .guarantee__three-title::after {
+    top: 0px;
+    right: 0px;
+  }
+  .questions__content-item--title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 411px) {
+  .header__top-title {
+    font-size: 25px;
+  }
+  .finance__form-item {
+    width: 100%;
+  }
+  .finance__form-price--sum,
+  .finance__form-valuta--value {
+    font-size: 30px;
+  }
+  .finance__form-price--desc,
+  .finance__form-valuta--desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 374px) {
+  .header__top-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 361px) {
+  .header__top-title {
+    font-size: 23px;
+  }
+  .header__top-text {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 349px) {
+  .header__top-title {
+    font-size: 20px;
+  }
+  .header__top-text {
+    font-size: 20px;
+  }
+  .header__top-earn {
+    margin: 0 0 20px 0;
+  }
+  .header__top-more {
+    margin: 0;
+  }
+}
+
+@media (max-width: px) {
+}
